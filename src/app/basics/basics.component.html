@@ -1,0 +1,16 @@
+<h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-5">
+        <h1>Animation Basics</h1>
+        <div class="btn-group-vertical btn-group basics" role="group">
+          <button (click)="setState(State.Original)" type="button" [class.active]="getStyle(State.Original)" class="btn btn-info">Return to Original</button>
+          <button (click)="setState(State.Basics)" type="button" [class.active]="getStyle(State.Basics)" class="btn btn-info">Animation</button>
+        </div>
+      </div>
+      <div class="col-7">
+        <app-animation-box [@changeState]="this.state"></app-animation-box>
+      </div>
+    </div>
+  </div>
+</h1>
