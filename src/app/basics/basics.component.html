@@ -6,6 +6,10 @@
         <div class="btn-group-vertical btn-group basics" role="group">
           <button (click)="setState(State.Original)" type="button" [class.active]="getStyle(State.Original)" class="btn btn-info">Return to Original</button>
           <button (click)="setState(State.Basics)" type="button" [class.active]="getStyle(State.Basics)" class="btn btn-info">Animation</button>
+          <button (click)="setState(State.Easing)" type="button" [class.active]="getStyle(State.Easing)" class="btn btn-info">Animation with easing</button>
+          <button (click)="setState(State.Delaying)" type="button" [class.active]="getStyle(State.Delaying)" class="btn btn-info">Animation with delaying</button>
+          <button (click)="setState(State.Stepped)" type="button" [class.active]="getStyle(State.Stepped)" class="btn btn-info">Stepped Animation</button>
+          <button (click)="setState(State.Parallel)" type="button" [class.active]="getStyle(State.Parallel)" class="btn btn-info">Parallel Animation</button>
         </div>
       </div>
       <div class="col-7">

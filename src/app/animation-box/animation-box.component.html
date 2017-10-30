@@ -1,1 +1,9 @@
-<div [@animationState]="changeState" class="animation-box mx-auto"></div>
+<div [@animationState]="changeState"
+     (@animationState.start)="animationBegin($event)"
+     (@animationState.done)="animationEnd($event)"
+     class="animation-box mx-auto"></div>
+<div class="message-box mx-auto">
+  <ol>
+    <li *ngFor="let msg of messages">{{msg}}</li>
+  </ol>
+</div>

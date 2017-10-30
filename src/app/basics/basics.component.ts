@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-enum State {
+
+export enum State {
   Original = 'original',
-  Basics = 'basics'
+  Basics = 'basics',
+  Easing = 'easing',
+  Delaying = 'delaying',
+  Stepped = 'stepped',
+  Parallel = 'parallel',
 }
 
 @Component({
