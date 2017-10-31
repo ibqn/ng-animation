@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BasicsComponent } from './basics/basics.component';
 import { AnimationBoxComponent } from './animation-box/animation-box.component';
+import { MouseComponent } from './mouse/mouse.component';
+import { ContainedComponent } from './contained/contained.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { AnimationBoxComponent } from './animation-box/animation-box.component';
     AppComponent,
     HomeComponent,
     BasicsComponent,
-    AnimationBoxComponent
+    AnimationBoxComponent,
+    MouseComponent,
+    ContainedComponent
   ],
   imports: [
     BrowserModule,
