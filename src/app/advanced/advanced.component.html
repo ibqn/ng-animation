@@ -2,6 +2,13 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12">
+      <div class="clearfix">
+        <ul>
+          <li *ngFor="let spoon of this.spoons" class="spoon-block d-flex justify-content-center">
+            {{ spoon.name }}
+          </li>
+        </ul>
+      </div>
       <app-fade-block></app-fade-block>
     </div>
   </div>
