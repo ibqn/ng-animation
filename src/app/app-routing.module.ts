@@ -7,12 +7,36 @@ import { AdvancedComponent } from './advanced/advanced.component';
 
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'basics', component: BasicsComponent },
-  { path: 'contained', component: ContainedComponent },
-  { path: 'advanced', component: AdvancedComponent },
+  { path: 'home', component: HomeComponent,
+    data: {
+      animation: {
+        value: 'home'
+      }
+    }
+  },
+  { path: 'basics', component: BasicsComponent,
+    data: {
+      animation: {
+        value: 'basics'
+      }
+    }
+  },
+  { path: 'contained', component: ContainedComponent,
+    data: {
+      animation: {
+        value: 'contained'
+      }
+    }
+  },
+  { path: 'advanced', component: AdvancedComponent,
+    data: {
+      animation: {
+        value: 'advanced'
+      }
+    }
+  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-// { path: '**', component: PageNotFoundComponent }
+  // { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

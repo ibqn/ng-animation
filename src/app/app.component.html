@@ -1,7 +1,7 @@
 <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/">Animation</a>
+    <a class="navbar-brand" routerLink="/">Animation</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,8 +25,8 @@
 </header>
 
 <!-- Begin page content -->
-<main role="main">
-  <router-outlet></router-outlet>
+<main role="main" [@routerAnimations]="prepareRouteTransition(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </main>
 
 <footer class="footer">
