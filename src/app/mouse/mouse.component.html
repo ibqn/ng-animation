@@ -1,5 +1,5 @@
 <div class="mouse-circle mx-auto"
   [@animationState]="this.mouseState"
-  (mouseenter)="setMouse(MouseState.Hover)"
-  (mouseleave)="setMouse(MouseState.Init)"
-  (mousedown)="setMouse(MouseState.Press)"></div>
+  (mouseenter)="this.setMouse(MouseState.Hover)"
+  (mouseleave)="this.setMouse(MouseState.Init)"
+  (mousedown)="this.setMouse(MouseState.Press)"></div>

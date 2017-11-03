@@ -9,7 +9,7 @@ import {
 } from '@angular/animations';
 
 
-enum MouseState {
+export enum MouseState {
   Init = 'init',
   Hover = 'hover',
   Press = 'press',
@@ -41,15 +41,17 @@ const animation: AnimationEntryMetadata = trigger('animationState', [
 export class MouseComponent implements OnInit {
   MouseState = MouseState;
 
-  private mouseState: MouseState;
+  private _mouseState: MouseState;
+
+  public get mouseState() { return this._mouseState; }
 
   constructor() { }
 
   ngOnInit() {
-    this.mouseState = MouseState.Init;
+    this._mouseState = MouseState.Init;
   }
 
-  private setMouse = (s: MouseState): void => {
-    this.mouseState = s;
+  public setMouse = (s: MouseState): void => {
+    this._mouseState = s;
   }
 }
