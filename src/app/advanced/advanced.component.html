@@ -3,13 +3,16 @@
   <div class="row">
     <div class="col-12">
       <div class="clearfix">
-        <ul>
-          <li *ngFor="let spoon of this.spoons" class="spoon-block d-flex justify-content-center">
-            {{ spoon.name }}
-          </li>
-        </ul>
+        <div>
+          <ul [@spoonAnimation]="this.spoons.length">
+            <li *ngFor="let spoon of this.spoons" class="spoon-block d-flex justify-content-center">
+              {{ spoon.name }}
+            </li>
+          </ul>
+        </div>
       </div>
       <app-fade-block></app-fade-block>
+      <button (click)="this.showSpoons()" type="button" class="btn btn-info">Show Spoons</button>
     </div>
   </div>
 </div>

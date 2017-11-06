@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, transition, query, animate, style, stagger } from '@angular/animations';
+
 
 interface Spoon {
   id: number;
@@ -8,7 +10,15 @@ interface Spoon {
 @Component({
   selector: 'app-advanced',
   templateUrl: './advanced.component.html',
-  styleUrls: ['./advanced.component.sass']
+  styleUrls: ['./advanced.component.sass'],
+  animations: [
+    trigger('spoonAnimation', [
+      transition('* => *', [
+        query(':enter', style({ opacity: '0' }), { optional: true }),
+        query(':enter', stagger('100ms', animate('1s', style({ opacity: '1' }))), { optional: true })
+      ])
+    ])
+  ]
 })
 export class AdvancedComponent implements OnInit {
   private _spoons: Spoon[];
@@ -18,6 +28,10 @@ export class AdvancedComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this._spoons = [];
+  }
+
+  showSpoons = () => {
     this._spoons = [
       { id: 1, name: 'Absinthe' },
       { id: 2, name: 'Bouillon' },
@@ -32,6 +46,7 @@ export class AdvancedComponent implements OnInit {
       { id: 11, name: 'Parfait' },
       { id: 12, name: 'Salt' },
       { id: 13, name: 'Soup' },
+      { id: 14, name: 'Saucier' },
     ];
   }
 
